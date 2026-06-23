@@ -1,0 +1,10 @@
+family,name,n,win_rate,avg_r,total_r,pf,max_dd,max_loss_streak,expectancy
+BASELINE,default-3R,66,28.8,0.02,1.32,1.03,10.87,10,1.3
+DIRECTION,bull-only-3R,28,35.7,0.243,6.81,1.41,8.45,9,6.8
+DIRECTION,bear-only-3R,38,23.7,-0.145,-5.49,0.79,10.04,7,-5.5
+COMBO,bull-sl0.3-rr2,30,43.3,0.141,4.22,1.26,8.43,9,4.2
+COMBO,bull-sl0.3-rr3,28,35.7,0.178,5.0,1.3,8.43,9,5.0
+COMBO,bull-sl0.5-rr2,30,40.0,0.066,1.97,1.12,8.39,9,2.0
+COMBO,bull-sl0.5-rr3,28,35.7,0.177,4.95,1.3,8.39,9,4.9
+COMBO,bull-2024-sl0.3-rr2,19,52.6,0.297,5.65,1.63,3.02,2,5.7
+COMBO,bull-2024-sl0.3-rr3,17,47.1,0.498,8.47,1.94,3.02,3,8.5
