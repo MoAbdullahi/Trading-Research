@@ -1,0 +1,42 @@
+# Data files (too large for GitHub — regenerate with data_fetch scripts)
+data/
+Python_Project/data/m15/
+Python_Project/data/m5/
+Python_Project/data/m1/
+*.parquet
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Zip archives
+*.zip
+
+# Large extracted folders
+smc_crt_extracted/
+
+# Log files
+*.log
+
+# Temp
+tmp/

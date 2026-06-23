@@ -1,0 +1,191 @@
+// This Pine Script® code is subject to the terms of the Mozilla Public License 2.0
+// © ICT H4/M5 Best Setup — Strategy for 4-Year Backtest
+// Setup: H4 OB Bias | M5 MSS Confirm | GO Sessions Only | RR 3:1
+
+//@version=5
+strategy("ICT H4 OB + M5 MSS [4Y Backtest]",
+     overlay             = true,
+     initial_capital     = 10000,
+     currency            = currency.USD,
+     default_qty_type    = strategy.cash,
+     default_qty_value   = 200,
+     commission_type     = strategy.commission.cash_per_contract,
+     commission_value    = 0.07,
+     slippage            = 3,
+     calc_on_every_tick  = false,
+     process_orders_on_close = false,
+     max_boxes_count     = 10,
+     max_lines_count     = 50,
+     max_labels_count    = 50)
+
+// ── INPUTS ─────────────────────────────────────────────────────────────────────
+htf           = input.timeframe("240",  "HTF (4H) Timeframe")
+swing_len     = input.int(15,           "Swing Length",          minval=5, maxval=50)
+rr_target     = input.float(3.0,        "RR Target (TP multiple)", minval=1.0, maxval=10.0, step=0.5)
+sl_buffer     = input.float(0.10,       "SL Buffer (× ATR)",     minval=0.0, maxval=1.0,  step=0.05)
+show_sessions = input.bool(true,        "Show Session Shading")
+show_ob_zones = input.bool(true,        "Show OB Boxes")
+show_signals  = input.bool(true,        "Show Entry Labels")
+
+// ── SESSIONS ───────────────────────────────────────────────────────────────────
+ny_hour      = hour(time, "America/New_York")
+is_london_kz  = ny_hour >= 2 and ny_hour < 5
+is_london     = ny_hour >= 5 and ny_hour < 8
+is_ny_am_kz   = ny_hour >= 7 and ny_hour < 10
+is_go_session = is_london_kz or is_london or is_ny_am_kz
+
+bgcolor(show_sessions and is_london_kz                  ? color.new(#1565c0, 90) : na, title="London KZ")
+bgcolor(show_sessions and is_ny_am_kz                   ? color.new(#e65100, 90) : na, title="NY AM KZ")
+bgcolor(show_sessions and is_london and not is_ny_am_kz ? color.new(#1565c0, 95) : na, title="London")
+
+// ── HTF (4H) DATA ──────────────────────────────────────────────────────────────
+[h_open, h_high, h_low, h_close] = request.security(syminfo.tickerid, htf,
+     [open, high, low, close], lookahead=barmerge.lookahead_off)
+htf_bull = h_close > h_open
+htf_bear = h_close < h_open
+htf_body = math.abs(h_close - h_open)
+htf_atr  = request.security(syminfo.tickerid, htf, ta.atr(14), lookahead=barmerge.lookahead_off)
+
+// ── SWING DETECTION ────────────────────────────────────────────────────────────
+ph = ta.pivothigh(high, swing_len, swing_len)
+pl = ta.pivotlow(low,  swing_len, swing_len)
+var float last_ph = na
+var float last_pl = na
+if not na(ph)
+    last_ph := ph
+if not na(pl)
+    last_pl := pl
+
+// ── ORDER BLOCK DETECTION ──────────────────────────────────────────────────────
+htf_impulse_up   = htf_bull and htf_body > htf_atr * 0.8 and h_close > h_close[2]
+htf_impulse_down = htf_bear and htf_body > htf_atr * 0.8 and h_close < h_close[2]
+
+var float bull_ob_hi    = na
+var float bull_ob_lo    = na
+var int   bull_ob_start = na
+var bool  bull_ob_active = false
+var float bear_ob_hi    = na
+var float bear_ob_lo    = na
+var int   bear_ob_start = na
+var bool  bear_ob_active = false
+
+if htf_impulse_up and htf_bear[1]
+    bull_ob_hi     := math.max(h_open[1], h_close[1])
+    bull_ob_lo     := math.min(h_open[1], h_close[1])
+    bull_ob_start  := bar_index
+    bull_ob_active := true
+if htf_impulse_down and htf_bull[1]
+    bear_ob_hi     := math.max(h_open[1], h_close[1])
+    bear_ob_lo     := math.min(h_open[1], h_close[1])
+    bear_ob_start  := bar_index
+    bear_ob_active := true
+
+atr14 = ta.atr(14)
+
+// Invalidate OB if price closes beyond it
+if bull_ob_active and close < bull_ob_lo - atr14 * 0.2
+    bull_ob_active := false
+if bear_ob_active and close > bear_ob_hi + atr14 * 0.2
+    bear_ob_active := false
+
+// ── OB BOXES ───────────────────────────────────────────────────────────────────
+var box bull_box = na
+var box bear_box = na
+
+if show_ob_zones and bull_ob_active and not na(bull_ob_hi)
+    if na(bull_box) or bar_index == bull_ob_start
+        if not na(bull_box)
+            box.delete(bull_box)
+        bull_box := box.new(bull_ob_start - 1, bull_ob_hi, bar_index + 10, bull_ob_lo,
+             border_color=#00c853, border_width=1, bgcolor=color.new(#00c853, 82))
+    else
+        box.set_right(bull_box, bar_index + 10)
+
+if show_ob_zones and bear_ob_active and not na(bear_ob_hi)
+    if na(bear_box) or bar_index == bear_ob_start
+        if not na(bear_box)
+            box.delete(bear_box)
+        bear_box := box.new(bear_ob_start - 1, bear_ob_hi, bar_index + 10, bear_ob_lo,
+             border_color=#d50000, border_width=1, bgcolor=color.new(#d50000, 82))
+    else
+        box.set_right(bear_box, bar_index + 10)
+
+// OB plot lines (always visible even without boxes)
+plot(bull_ob_active ? bull_ob_hi : na, "Bull OB Hi", color.new(#00c853, 40), 1, plot.style_linebr)
+plot(bull_ob_active ? bull_ob_lo : na, "Bull OB Lo", color.new(#00c853, 40), 1, plot.style_linebr)
+plot(bear_ob_active ? bear_ob_hi : na, "Bear OB Hi", color.new(#d50000, 40), 1, plot.style_linebr)
+plot(bear_ob_active ? bear_ob_lo : na, "Bear OB Lo", color.new(#d50000, 40), 1, plot.style_linebr)
+
+// ── PRICE IN OB ────────────────────────────────────────────────────────────────
+in_bull_ob = bull_ob_active and not na(bull_ob_hi) and low <= bull_ob_hi and high >= bull_ob_lo
+in_bear_ob = bear_ob_active and not na(bear_ob_hi) and high >= bear_ob_lo and low  <= bear_ob_hi
+
+// ── MSS (Market Structure Shift) ───────────────────────────────────────────────
+recent_high = ta.highest(high, 10)[1]
+recent_low  = ta.lowest(low,   10)[1]
+bull_mss    = in_bull_ob and ta.crossover(close, recent_high)  and is_go_session
+bear_mss    = in_bear_ob and ta.crossunder(close, recent_low)  and is_go_session
+
+// ── STRATEGY ENTRIES ───────────────────────────────────────────────────────────
+no_position = strategy.position_size == 0
+
+if bull_mss and no_position and not na(bull_ob_lo)
+    sl_price = bull_ob_lo - atr14 * sl_buffer
+    tp_price = close + (close - sl_price) * rr_target
+    strategy.entry("Long", strategy.long, comment="MSS LONG")
+    strategy.exit("Long SL/TP", from_entry="Long", stop=sl_price, limit=tp_price)
+    if show_signals
+        label.new(bar_index, low - atr14 * 1.2, "LONG\nMSS",
+             color=#00e676, textcolor=color.black,
+             style=label.style_label_up, size=size.normal)
+
+if bear_mss and no_position and not na(bear_ob_hi)
+    sl_price = bear_ob_hi + atr14 * sl_buffer
+    tp_price = close - (sl_price - close) * rr_target
+    strategy.entry("Short", strategy.short, comment="MSS SHORT")
+    strategy.exit("Short SL/TP", from_entry="Short", stop=sl_price, limit=tp_price)
+    if show_signals
+        label.new(bar_index, high + atr14 * 1.2, "SHORT\nMSS",
+             color=#ff1744, textcolor=color.white,
+             style=label.style_label_down, size=size.normal)
+
+// Close trade if OB is invalidated mid-trade
+if strategy.position_size > 0 and not bull_ob_active
+    strategy.close("Long", comment="OB Invalidated")
+if strategy.position_size < 0 and not bear_ob_active
+    strategy.close("Short", comment="OB Invalidated")
+
+// ── PERFORMANCE TABLE ──────────────────────────────────────────────────────────
+var table perf = table.new(position.top_right, 2, 8,
+     bgcolor=color.new(color.black, 75),
+     border_color=color.new(color.gray, 50), border_width=1)
+
+if barstate.islast
+    wr   = strategy.wintrades / math.max(strategy.closedtrades, 1) * 100
+    pf   = strategy.grossprofit / math.max(strategy.grossloss, 1)
+    avg_w = strategy.grossprofit / math.max(strategy.wintrades, 1)
+    avg_l = strategy.grossloss   / math.max(strategy.losstrades, 1)
+    rr_actual = avg_w / math.max(avg_l, 1)
+    net  = strategy.netprofit
+
+    table.cell(perf, 0, 0, "ICT H4/M5 4Y",   bgcolor=color.new(#1565c0,40), text_color=color.white, text_size=size.small)
+    table.cell(perf, 1, 0, syminfo.ticker + " 5M", bgcolor=color.new(#1565c0,40), text_color=color.white, text_size=size.small)
+    table.cell(perf, 0, 1, "Trades",   text_color=color.gray,  text_size=size.tiny)
+    table.cell(perf, 1, 1, str.tostring(strategy.closedtrades), text_color=color.white, text_size=size.tiny)
+    table.cell(perf, 0, 2, "Win Rate", text_color=color.gray,  text_size=size.tiny)
+    table.cell(perf, 1, 2, str.tostring(math.round(wr, 1)) + "%",
+         text_color=wr >= 60 ? #00e676 : wr >= 50 ? #ffd600 : #ff1744, text_size=size.tiny)
+    table.cell(perf, 0, 3, "Profit Factor", text_color=color.gray, text_size=size.tiny)
+    table.cell(perf, 1, 3, str.tostring(math.round(pf, 2)),
+         text_color=pf >= 2.0 ? #00e676 : pf >= 1.5 ? #ffd600 : #ff1744, text_size=size.tiny)
+    table.cell(perf, 0, 4, "Avg RR",   text_color=color.gray,  text_size=size.tiny)
+    table.cell(perf, 1, 4, str.tostring(math.round(rr_actual, 2)) + ":1",
+         text_color=#ffd600, text_size=size.tiny)
+    table.cell(perf, 0, 5, "Net Profit", text_color=color.gray, text_size=size.tiny)
+    table.cell(perf, 1, 5, "$" + str.tostring(math.round(net, 0)),
+         text_color=net > 0 ? #00e676 : #ff1744, text_size=size.tiny)
+    table.cell(perf, 0, 6, "RR Target", text_color=color.gray, text_size=size.tiny)
+    table.cell(perf, 1, 6, str.tostring(rr_target) + ":1", text_color=#ffd600, text_size=size.tiny)
+    table.cell(perf, 0, 7, "Session",   text_color=color.gray, text_size=size.tiny)
+    table.cell(perf, 1, 7, is_go_session ? "ACTIVE" : "Off Hours",
+         text_color=is_go_session ? #00e676 : color.gray, text_size=size.tiny)
