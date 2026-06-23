@@ -1,0 +1,153 @@
+1. Define Higher‑Timeframe Bias
+
+	1. Choose HTF M15 as your **intention** timeframe. 
+	2. Mark clear swing highs/lows and identify valid Break of Structure (BOS) and Change of Character (CHOCH).  
+   		- BOS = continuation in the existing trend direction.  
+   		- CHOCH = first structural break suggesting potential trend reversal. 
+	3. Decide if market is overall bullish (HH–HL) or bearish (LL–LH). You only want to trade in line with this HTF order flow, unless you very 		   deliberately trade a pullback with pragmatic TP.
+
+2. Map HTF Trading Range and Premium/Discount
+
+	1. On the chosen HTF, mark the current trading range: last major swing low to last major swing high.
+	2. Apply Fibonacci with levels 0 / 0.5 / 1 from low to high (or high to low if bearish) to separate:  
+   		- Premium region (sell zones in a downtrend).  
+   		- Discount region (buy zones in an uptrend).
+	3. Only look for:  
+   		- HTF supply zones inside premium for shorts.  
+   		- HTF demand zones inside discount for longs.  
+   	  *This filters out many weak zones and fake CHOCHs.
+
+3. Identify HTF Points of Interest (POI)
+
+	1. Within those premium/discount regions, mark **s	ply** and **demand** zones (order blocks):  
+   		- The last opposing candle or consolidation that caused a strong impulse and structural break (BOS/CHOCH). 
+	2. Include wicks: HTF wicks usually contain clear LTF zones (“hidden” supply/demand).
+	3. Ensure each POI is causative: there must be a clear structural effect (BOS or CHOCH) originating from that zone. “Remember, there has to be a 	   cause.” 
+
+4. Read Liquidity: “See the Liquidity or Be the Liquidity”
+
+	1. Mark obvious liquidity pools:  
+   		- Equal highs / equal lows.  
+   		- Trendline touches (third touch, classic TL trading).  
+   		- Range highs/lows (textbook support/resistance). 
+	2. Understand these are fuel, not trade entries:  
+   		- Retail is taught to sell double tops and buy double bottoms, but these levels are typically swept.  
+   		- Trendlines and ranges gather liquidity that is later hunted
+	3. Expect price to:  
+   		- Move toward liquidity pools.  
+   		- Sweep them and then reverse from your POI or LTF zone.
+
+5. Wait for Liquidity Sweep into HTF POI
+
+	1. Combine steps 2–4:  
+   		- In a bearish bias, watch price push up into premium, taking out equal highs/trendline highs/range highs on the way to your HTF supply.  
+   		- In a bullish bias, watch price push down into discount, taking out equal lows/trendline lows/range lows on the way to your HTF demand. 
+	2. Ideal scenario (both directions):  
+   		- Liquidity sweep (stop‑hunt) occurs right into or just through your HTF POI (supply/demand).  
+   		- That sweep itself often forms your inducement for the reversal.
+
+6. Drop to LTF M1: CHOCH in Opposite Direction
+
+	1. Once price taps your HTF POI, **flip to lower timeframe** (e.g M1).
+	2. On LTF, look for a CHOCH in the opposite direction of the prior LTF move:  
+   		- For a short: inside HTF supply, wait for the LTF bullish structure (HH–HL) to break to the downside (first LH/LL).  
+   		- For a long: inside HTF demand, wait for the LTF bearish structure (LL–LH) to break to the upside (first HL/HH).
+	3. Ignore “false CHOCH” that does not come from a meaningful POI or fails to break meaningful structure; distinguish between false vs actual CHOCH  	   around traps.
+
+7. Mark the LTF Execution Zone (Order Block / Mitigation)
+
+	1. After the LTF CHOCH, identify the newly created LTF supply (for shorts) or demand (for longs) that **caused** that CHOCH or BOS.
+	2. This LTF zone is your primary execution area:  
+   		- It may be the last opposing candle before the CHOCH impulse.  
+   		- It may be a “breaker” or “flip” zone where supply lost control and demand took over (or vice versa).
+	3. Note prior mitigations:  
+   		- check for chains of prior reactions “Demand Chain” etc., which help anticipate where price may react and refine POI selection.
+
+8. Choose Entry Style: Risk vs Confirmation(for the entry i would to test each one for their own seperate way)
+
+	Two entry styles, both built on the HTF POI + LTF CHOCH framework.
+	8.1 Risk Entry
+		1. Once HTF POI and LTF zone are identified, place a limit (or instant) order at the LTF zone.
+		2. Conditions:  
+   			- You do not wait for a second CHOCH or micro‑confirmation.  
+   			- You accept lower win rate but better RR because entry is at or near the zone’s edge.
+	8.2 Confirmation Entry
+		1. Let price tap the LTF execution zone and then drop even lower (or stay on same LTF) and look for a further micro‑CHOCH / BOS in your 			   intended direction(M1).
+		2. Enter after that local confirmation, often using one of the entry techniques:  
+   			- Candle close / next candle open.  
+   			- Break of the candle.  
+   			- Limit at 50% of engulfing candle. 
+		3. Higher probability but often less RR and more time‑consuming.
+
+9. Buffer for Spread and Practical Execution
+	1. Add spread to stops and entries so you do not miss fills by 0.5 pips, for example:  
+   		- If spread = 0.5 pips, add 0.5 pips to both SL and entry (buys and sells). 
+	2. If price does not fully mitigate the original HTF zone but gives valid signals, adapt:  
+   		- Don’t get stuck waiting for a “perfect” touch if there is a new valid POI and CHOCH.  
+   		- “No risk, no reward” and “be reactive, not predictive.” 
+
+10. Stop‑Loss Placement
+	1. For risk or confirmation entries:  
+   		- Place SL beyond the structure/zone: above LTF supply for shorts, below LTF demand for longs. 
+	2. Account for:  
+   		- Spread buffering as above.  
+   		- Possible wick sweeps beyond the body; using wicks is recognized as valid as long as the structure remains intact. 
+
+11. Targets: Use HTF Structure, Ranges and Liquidity
+	1. Choose targets aligned with HTF structure:  
+   		- In a sell from HTF supply, typical targets are HTF lows of the range or the next clear discount zone.  
+   		- In a buy from HTF demand, targets are HTF highs of the range or the next clear premium zone.
+	2. Integrate liquidity:  
+   		- Aim at liquidity pools (equal highs/lows, range boundaries, trendline extremes).  
+   		- Many setups show “targeting the lows” or “targeting the highs” after traps and sweeps.
+
+12. Flip Entries (Supply → Demand, Demand → Supply)
+	1. A flip occurs when a supply zone is violated and demand takes control, or vice versa. 
+	2. Conditions for a valid flip entry:  
+   		- Must be in continuation of the current main trend, not counter‑trend.  
+   		- Supply fails to hold and that failure itself creates a demand zone which then becomes your POI.
+	3. Prefer entries after the CHOCH associated with the flip.
+
+13. Managing Multiple Timeframes
+	1. Core template: HTF intention + LTF execution:  
+   		- M15 POI with M1 entries, targeting M15 lows, stops above M1 structure/zone. 
+	2. When in doubt, zoom out:  
+   		- A single H4 candle equals many LTF candles; always keep HTF structure in mind when trading LTF setups.
+
+14. Valid vs Invalid Structure and No‑Trade Zones
+	1. A BOS is only valid if price makes a **new** high or low beyond the previous swing. 
+	2. Zones that do not lead to a new structural high/low are invalid as POIs.  
+	3. Do not trade from highs/lows that are not structurally valid; explicitly label such areas as “No Trade” in examples. 
+
+15. High‑Probability Entry Model Structure
+	1. HTF bias and POI (premium for shorts, discount for longs).  
+	2. Clear liquidity on the approach (trendlines, equal highs/lows, ranges).  
+	3. Sweep of that liquidity into HTF POI.  
+	4. LTF CHOCH in opposite direction.  
+	5. LTF execution zone (order block/flip) that caused the CHOCH.  
+	6. Risk or confirmation entry from that zone.  
+	7. Targets at HTF structure/next liquidity pool.
+
+16. Psychological and Plan Components (Non‑Technical but Part of the Strategy)
+	1. Risk per trade: typically 1–3% or less.  
+	2. Expectancy and journaling: track trades, review winners and losers, and calculate expectancy.  
+	3. Mental preparation: sleep, emotional state, avoiding FOMO, accepting losses as inevitable.  
+	4. Roadmap: learn basics → choose system → build plan → backtest → paper trade → go live → track/review.  
+	These steps do not change the technical entry model but define how it should be implemented consistently. 
+
+17. Complete Execution Checklist (Condensed)
+For one trade, the exact ordered checklist implied by the book is:
+	1. Select market and HTF (e.g.M15).  
+	2. Determine HTF trend using valid BOS/CHOCH.  
+	3. Mark HTF trading range and apply premium/discount.  
+	4. Within correct region (premium or discount), mark HTF POI (supply/demand) with a clear structural “cause”.  
+	5. Identify major liquidity on the path to that POI (equal highs/lows, trendlines, ranges).  
+	6. Wait for price to move into the HTF POI, ideally sweeping nearby liquidity.  
+	7. Once in HTF POI, drop to LTF(M1) and wait for CHOCH in the intended direction.  
+	8. Mark the LTF execution zone (order block / flip / breaker that caused CHOCH).  
+	9. Decide: risk entry (limit in zone) or confirmation entry (extra CHOCH/BOS on even lower TF or micro‑structure).  
+	10. Set SL beyond the LTF zone/structure, adding spread buffer.  
+	11. Set TP at logical HTF target: range high/low or next liquidity pool; ensure a favorable RR.  
+	12. Execute according to the plan; do not move stops emotionally, adapt only if new valid structure forms.  
+	13. After trade closes, journal: grade entry, note confluences (HTF POI, liquidity, CHOCH, imbalance, etc.), and update expectancy.  
+
