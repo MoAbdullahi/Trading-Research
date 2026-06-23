@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+user_data/data/
+user_data/logs/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.env
+.ipynb_checkpoints/

@@ -1,0 +1,363 @@
+2026-06-09 20:30:21,057 - freqtrade - INFO - freqtrade 2023.7
+2026-06-09 20:30:21,068 - freqtrade.configuration.load_config - INFO - Using config: user_data/config.json ...
+2026-06-09 20:30:21,070 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-06-09 20:30:21,071 - freqtrade.configuration.configuration - INFO - Parameter -i/--timeframe detected ... Using timeframe: 5m ...
+2026-06-09 20:30:21,071 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 3 ...
+2026-06-09 20:30:21,071 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20250201- ...
+2026-06-09 20:30:21,072 - freqtrade.configuration.configuration - INFO - Using user-data directory: /sessions/clever-funny-bell/mnt/Test/freqtrade/user_data ...
+2026-06-09 20:30:21,072 - freqtrade.configuration.configuration - INFO - Using data directory: user_data/data/bybit ...
+2026-06-09 20:30:21,072 - freqtrade.configuration.configuration - INFO - Overriding timeframe with Command line argument
+2026-06-09 20:30:21,072 - freqtrade.configuration.configuration - INFO - Parameter --cache=day detected ...
+2026-06-09 20:30:21,072 - freqtrade.configuration.configuration - INFO - Using pairs ['BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'XRP/USDT', 'BNB/USDT', 'DOGE/USDT', 'ADA/USDT', 'AVAX/USDT', 'LINK/USDT', 'LTC/USDT', 'DOT/USDT', 'TRX/USDT']
+2026-06-09 20:30:21,072 - freqtrade.configuration.configuration - INFO - Filter trades by timerange: 20250201-
+2026-06-09 20:30:21,074 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-06-09 20:30:21,081 - freqtrade.exchange.check_exchange - WARNING - Exchange "bybit" is known to the the ccxt library, available for the bot, but not officially supported by the Freqtrade development team. It may work flawlessly (please report back) or have serious issues. Use it at your own discretion.
+2026-06-09 20:30:21,082 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-06-09 20:30:21,083 - freqtrade.commands.optimize_commands - INFO - Starting freqtrade in Backtesting mode
+2026-06-09 20:30:21,084 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-06-09 20:30:21,084 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.56
+2026-06-09 20:30:21,084 - freqtrade.exchange.exchange - INFO - Overriding exchange._ft_has with config params, result: {'stoploss_on_exchange': False, 'stop_price_param': 'stopPrice', 'order_time_in_force': ['GTC'], 'ohlcv_params': {}, 'ohlcv_candle_limit': 1000, 'ohlcv_has_history': True, 'ohlcv_partial_candle': True, 'ohlcv_require_since': False, 'ohlcv_volume_currency': 'base', 'tickers_have_quoteVolume': True, 'tickers_have_bid_ask': True, 'tickers_have_price': True, 'trades_pagination': 'time', 'trades_pagination_arg': 'since', 'l2_limit_range': None, 'l2_limit_range_required': True, 'mark_ohlcv_price': 'mark', 'mark_ohlcv_timeframe': '8h', 'ccxt_futures_name': 'swap', 'needs_trading_fees': False, 'order_props_in_contracts': ['amount', 'filled', 'remaining'], 'marketOrderRequiresPrice': False}
+2026-06-09 20:30:21,084 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'options': {'defaultType': 'spot'}}
+2026-06-09 20:30:21,088 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'options': {'defaultType': 'spot'}}
+2026-06-09 20:30:21,094 - freqtrade.exchange.exchange - INFO - Using Exchange "Bybit"
+2026-06-09 20:30:21,139 - freqtrade.exchange.exchange - WARNING - Could not load async markets. Reason: bybit GET https://api.bybit.com/v5/market/instruments-info?category=spot
+2026-06-09 20:30:21,140 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Bybit'...
+2026-06-09 20:30:21,221 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy NFI5MOHO_WIP from '/sessions/clever-funny-bell/mnt/Test/freqtrade/user_data/strategies/NFI5MOHO_WIP.py'...
+2026-06-09 20:30:21,222 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+2026-06-09 20:30:21,222 - freqtrade.resolvers.strategy_resolver - WARNING - DEPRECATED: Using 'sell_profit_only' moved to 'exit_profit_only'.
+2026-06-09 20:30:21,222 - freqtrade.resolvers.strategy_resolver - WARNING - DEPRECATED: Using 'use_sell_signal' moved to 'use_exit_signal'.
+2026-06-09 20:30:21,222 - freqtrade.resolvers.strategy_resolver - WARNING - DEPRECATED: Using 'ignore_roi_if_buy_signal' moved to 'ignore_roi_if_entry_signal'.
+2026-06-09 20:30:21,222 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value in config file: 5m.
+2026-06-09 20:30:21,222 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value in config file: USDT.
+2026-06-09 20:30:21,222 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value in config file: unlimited.
+2026-06-09 20:30:21,222 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value in config file: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 'unit': 'minutes'}.
+2026-06-09 20:30:21,222 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value in config file: 3.
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {'0': 0.111, '13': 0.048, '50': 0.015, '61': 0.01}
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 5m
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.99
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive: 0.01
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.03
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: True
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'buy': 'limit', 'sell': 'limit', 'trailing_stop_loss': 'limit', 'stoploss': 'limit', 'stoploss_on_exchange': False}
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: unlimited
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using protections: []
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 300
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 'unit': 'minutes'}
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: True
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2026-06-09 20:30:21,223 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 3
+2026-06-09 20:30:21,223 - freqtrade.configuration.config_validation - WARNING - DEPRECATED: Using 'buy' and 'sell' for order_types is deprecated.Please migrate your order_types settings to use 'entry' and 'exit' wording.
+2026-06-09 20:30:21,223 - freqtrade.configuration.deprecated_settings - WARNING - DEPRECATED: The `order_types.buy` setting is deprecated and will be removed in the next versions of Freqtrade. Please use the `order_types.entry` setting in your configuration instead.
+2026-06-09 20:30:21,223 - freqtrade.configuration.deprecated_settings - WARNING - DEPRECATED: The `order_types.sell` setting is deprecated and will be removed in the next versions of Freqtrade. Please use the `order_types.exit` setting in your configuration instead.
+2026-06-09 20:30:21,223 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-06-09 20:30:21,251 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/sessions/clever-funny-bell/mnt/Test/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2026-06-09 20:30:21,252 - freqtrade.data.history.history_utils - INFO - Using indicator startup period: 300 ...
+2026-06-09 20:30:24,581 - freqtrade.optimize.backtesting - INFO - Loading data from 2025-01-30 23:00:00 up to 2025-06-01 14:30:00 (121 days).
+2026-06-09 20:30:24,581 - freqtrade.optimize.backtesting - INFO - Dataload complete. Calculating indicators
+2026-06-09 20:30:24,585 - freqtrade.optimize.backtesting - WARNING - Backtest result caching disabled due to use of open-ended timerange.
+2026-06-09 20:30:24,585 - freqtrade.optimize.backtesting - INFO - Running backtesting for Strategy NFI5MOHO_WIP
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): base_nb_candles_buy = 20
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_bb20_close_bblowerband_4 = 0.979
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_bb20_volume_4 = 10.0
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_bb40_bbdelta_close_3 = 0.057
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_bb40_closedelta_close_3 = 0.023
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_bb40_tail_bbdelta_3 = 0.418
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_bb_offset_10 = 0.994
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_bb_offset_14 = 0.986
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_bb_offset_18 = 0.982
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_bb_offset_2 = 0.983
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_bb_offset_5 = 0.999
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_bb_offset_6 = 0.984
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_bb_offset_9 = 0.985
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_chop_min_19 = 58.2
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_condition_10_enable = True
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_condition_11_enable = True
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_condition_12_enable = True
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_condition_13_enable = True
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_condition_14_enable = True
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_condition_15_enable = True
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_condition_16_enable = True
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_condition_17_enable = True
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_condition_18_enable = True
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_condition_19_enable = True
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_condition_1_enable = True
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_condition_20_enable = True
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_condition_21_enable = True
+2026-06-09 20:30:24,586 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_condition_2_enable = True
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_condition_3_enable = True
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_condition_4_enable = True
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_condition_5_enable = True
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_condition_6_enable = True
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_condition_7_enable = True
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_condition_8_enable = True
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_condition_9_enable = True
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_dip_threshold_1 = 0.02
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_dip_threshold_10 = 0.24
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_dip_threshold_11 = 0.42
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_dip_threshold_12 = 0.66
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_dip_threshold_2 = 0.14
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_dip_threshold_3 = 0.32
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_dip_threshold_4 = 0.5
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_dip_threshold_5 = 0.015
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_dip_threshold_6 = 0.06
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_dip_threshold_7 = 0.24
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_dip_threshold_8 = 0.4
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_dip_threshold_9 = 0.026
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_ema_open_mult_14 = 0.014
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_ema_open_mult_15 = 0.018
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_ema_open_mult_5 = 0.019
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_ema_open_mult_6 = 0.025
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_ema_open_mult_7 = 0.03
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_ema_rel_15 = 0.988
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_ema_rel_3 = 0.986
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_ema_rel_5 = 0.982
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_ema_rel_7 = 0.986
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_ewo_12 = 2.0
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_ewo_13 = -10.4
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_ewo_16 = 2.8
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_ewo_17 = -12.0
+2026-06-09 20:30:24,587 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_ma_offset_10 = 0.944
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_ma_offset_11 = 0.939
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_ma_offset_12 = 0.936
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_ma_offset_13 = 0.978
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_ma_offset_14 = 0.97
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_ma_offset_15 = 0.954
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_ma_offset_16 = 0.952
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_ma_offset_17 = 0.958
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_ma_offset_9 = 0.97
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_mfi_1 = 26.0
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_mfi_11 = 38.0
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_mfi_2 = 49.0
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_mfi_9 = 30.0
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_min_inc_1 = 0.022
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_min_inc_11 = 0.022
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_pump_pull_threshold_1 = 1.75
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_pump_pull_threshold_2 = 1.75
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_pump_pull_threshold_3 = 1.75
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_pump_pull_threshold_4 = 2.2
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_pump_pull_threshold_5 = 2.0
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_pump_pull_threshold_6 = 2.0
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_pump_pull_threshold_7 = 1.7
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_pump_pull_threshold_8 = 1.7
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_pump_pull_threshold_9 = 1.4
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_pump_threshold_1 = 0.5
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_pump_threshold_2 = 0.56
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_pump_threshold_3 = 0.85
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_pump_threshold_4 = 0.4
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_pump_threshold_5 = 0.56
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_pump_threshold_6 = 0.68
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_pump_threshold_7 = 0.66
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_pump_threshold_8 = 0.7
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_pump_threshold_9 = 1.3
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_rsi_1 = 36.0
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_rsi_11 = 48.0
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_rsi_12 = 30.0
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_rsi_15 = 28.0
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_rsi_16 = 31.0
+2026-06-09 20:30:24,588 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_rsi_18 = 26.0
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_rsi_1h_10 = 37.0
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_rsi_1h_20 = 20.0
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_rsi_1h_21 = 24.0
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_rsi_1h_diff_2 = 39.0
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_rsi_1h_max_1 = 84.0
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_rsi_1h_max_11 = 84.0
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_rsi_1h_max_2 = 84.0
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_rsi_1h_max_9 = 88.0
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_rsi_1h_min_1 = 30.0
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_rsi_1h_min_11 = 56.0
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter: buy_rsi_1h_min_19 = 65.3
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_rsi_1h_min_2 = 32.0
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_rsi_1h_min_9 = 30.0
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_rsi_20 = 26.0
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_rsi_21 = 23.0
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_rsi_7 = 36.0
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_rsi_8 = 20.0
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_tail_diff_8 = 3.5
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_volume_10 = 2.4
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_volume_12 = 1.7
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_volume_13 = 1.6
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_volume_14 = 2.0
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_volume_15 = 2.0
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_volume_16 = 2.0
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_volume_17 = 2.0
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_volume_18 = 2.0
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_volume_2 = 2.6
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_volume_20 = 1.2
+2026-06-09 20:30:24,589 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_volume_21 = 3.0
+2026-06-09 20:30:24,590 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_volume_7 = 2.0
+2026-06-09 20:30:24,590 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_volume_8 = 2.0
+2026-06-09 20:30:24,590 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): buy_volume_9 = 1.0
+2026-06-09 20:30:24,590 - freqtrade.strategy.hyper - INFO - Strategy Parameter: ewo_high = 3.319
+2026-06-09 20:30:24,590 - freqtrade.strategy.hyper - INFO - Strategy Parameter: ewo_low = -11.101
+2026-06-09 20:30:24,590 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): fast_ewo = 50
+2026-06-09 20:30:24,590 - freqtrade.strategy.hyper - INFO - Strategy Parameter: low_offset_ema = 0.929
+2026-06-09 20:30:24,590 - freqtrade.strategy.hyper - INFO - Strategy Parameter: low_offset_kama = 0.972
+2026-06-09 20:30:24,590 - freqtrade.strategy.hyper - INFO - Strategy Parameter: low_offset_sma = 0.955
+2026-06-09 20:30:24,590 - freqtrade.strategy.hyper - INFO - Strategy Parameter: low_offset_t3 = 0.975
+2026-06-09 20:30:24,590 - freqtrade.strategy.hyper - INFO - Strategy Parameter: low_offset_trima = 0.949
+2026-06-09 20:30:24,590 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): slow_ewo = 200
+2026-06-09 20:30:24,590 - freqtrade.strategy.hyper - INFO - Strategy Parameter: base_nb_candles_sell = 34
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter: high_offset_ema = 1.047
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter: high_offset_kama = 1.07
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter: high_offset_sma = 1.051
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter: high_offset_t3 = 0.999
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter: high_offset_trima = 1.096
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_bb_relative_8 = 1.1
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter: sell_condition_1_enable = True
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter: sell_condition_2_enable = True
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter: sell_condition_3_enable = True
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter: sell_condition_4_enable = True
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter: sell_condition_5_enable = True
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter: sell_condition_6_enable = True
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter: sell_condition_7_enable = True
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter: sell_condition_8_enable = True
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_custom_dec_profit_1 = 0.05
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_custom_dec_profit_2 = 0.07
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_custom_profit_0 = 0.01
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_custom_profit_1 = 0.03
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_custom_profit_2 = 0.05
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_custom_profit_3 = 0.08
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_custom_profit_4 = 0.25
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_custom_profit_under_rel_1 = 0.024
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_custom_profit_under_rsi_diff_1 = 4.4
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_custom_rsi_0 = 33.0
+2026-06-09 20:30:24,591 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_custom_rsi_1 = 38.0
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_custom_rsi_2 = 43.0
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_custom_rsi_3 = 48.0
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_custom_rsi_4 = 50.0
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_custom_stoploss_under_rel_1 = 0.004
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_custom_stoploss_under_rsi_diff_1 = 8.0
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_custom_under_profit_1 = 0.02
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_custom_under_profit_2 = 0.04
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_custom_under_profit_3 = 0.6
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_custom_under_rsi_1 = 56.0
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_custom_under_rsi_2 = 60.0
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_custom_under_rsi_3 = 62.0
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_dual_rsi_rsi_1h_4 = 79.6
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_dual_rsi_rsi_4 = 73.4
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_ema_relative_5 = 0.024
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_rsi_1h_7 = 81.7
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_rsi_bb_1 = 79.5
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_rsi_bb_2 = 81
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_rsi_diff_5 = 4.4
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_rsi_main_3 = 82
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_rsi_under_6 = 79.0
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_trail_down_1 = 0.18
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_trail_down_2 = 0.14
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_trail_down_3 = 0.01
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_trail_profit_max_1 = 0.46
+2026-06-09 20:30:24,592 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_trail_profit_max_2 = 0.12
+2026-06-09 20:30:24,593 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_trail_profit_max_3 = 0.1
+2026-06-09 20:30:24,593 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_trail_profit_min_1 = 0.15
+2026-06-09 20:30:24,593 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_trail_profit_min_2 = 0.01
+2026-06-09 20:30:24,593 - freqtrade.strategy.hyper - INFO - Strategy Parameter(default): sell_trail_profit_min_3 = 0.05
+2026-06-09 20:30:24,593 - freqtrade.strategy.hyper - INFO - No params for protection found, using default values.
+2026-06-09 20:30:27,036 - freqtrade.optimize.backtesting - INFO - Backtesting with data from 2025-02-01 00:00:00 up to 2025-06-01 14:30:00 (120 days).
+  results = DataFrame.from_records(trade_list)
+  results = DataFrame.from_records(trade_list)
+  results = DataFrame.from_records(trade_list)
+  resampled = results.resample(resample_period, on='close_date')
+2026-06-09 20:30:32,686 - freqtrade.misc - INFO - dumping json to "/sessions/clever-funny-bell/mnt/Test/freqtrade/user_data/backtest_results/backtest-result-2026-06-09_20-30-32.meta.json"
+2026-06-09 20:30:32,693 - freqtrade.misc - INFO - dumping json to "/sessions/clever-funny-bell/mnt/Test/freqtrade/user_data/backtest_results/backtest-result-2026-06-09_20-30-32.json"
+2026-06-09 20:30:32,714 - freqtrade.misc - INFO - dumping json to "/sessions/clever-funny-bell/mnt/Test/freqtrade/user_data/backtest_results/.last_result.json"
+Result for strategy NFI5MOHO_WIP
+============================================================ BACKTESTING REPORT ===========================================================
+|      Pair |   Entries |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|-----------+-----------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+|  ADA/USDT |         8 |           2.05 |          16.38 |           568.869 |           5.69 |        1:22:00 |     8     0     0   100 |
+|  XRP/USDT |         7 |           2.29 |          16.05 |           555.925 |           5.56 |        0:41:00 |     7     0     0   100 |
+|  SOL/USDT |         1 |           2.76 |           2.76 |            97.656 |           0.98 |        0:50:00 |     1     0     0   100 |
+| DOGE/USDT |         2 |           1.25 |           2.50 |            89.106 |           0.89 |        1:22:00 |     2     0     0   100 |
+|  DOT/USDT |         1 |           2.35 |           2.35 |            80.251 |           0.80 |        0:50:00 |     1     0     0   100 |
+| AVAX/USDT |         1 |           1.50 |           1.50 |            54.082 |           0.54 |        0:55:00 |     1     0     0   100 |
+|  TRX/USDT |         2 |           0.24 |           0.49 |            16.520 |           0.17 |        0:48:00 |     2     0     0   100 |
+|  BTC/USDT |         0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+| LINK/USDT |         2 |          -0.64 |          -1.28 |           -48.542 |          -0.49 |        9:05:00 |     1     0     1  50.0 |
+|  LTC/USDT |         1 |          -1.63 |          -1.63 |           -60.097 |          -0.60 |       16:45:00 |     0     0     1     0 |
+|  BNB/USDT |         1 |          -1.81 |          -1.81 |           -64.196 |          -0.64 |        8:15:00 |     0     0     1     0 |
+|  ETH/USDT |         2 |          -3.74 |          -7.48 |          -275.460 |          -2.75 |       16:20:00 |     0     0     2     0 |
+|     TOTAL |        28 |           1.07 |          29.82 |          1014.115 |          10.14 |        3:31:00 |    23     0     5  82.1 |
+======================================================= LEFT OPEN TRADES REPORT ========================================================
+|   Pair |   Entries |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------+-----------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+|  TOTAL |         0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+=========================================================== ENTER TAG STATS ===========================================================
+|   TAG |   Entries |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|-------+-----------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+| TOTAL |        28 |           1.07 |          29.82 |          1014.115 |          10.14 |        3:31:00 |    23     0     5  82.1 |
+======================================================== EXIT REASON STATS ========================================================
+|         Exit Reason |   Exits |   Win  Draws  Loss  Win% |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |
+|---------------------+---------+--------------------------+----------------+----------------+-------------------+----------------|
+|                 roi |      13 |     13     0     0   100 |           1.39 |          18.06 |           648.185 |           6.02 |
+| signal_stoploss_u_1 |       5 |      0     0     5     0 |          -2.74 |         -13.7  |          -502.377 |          -4.57 |
+|   signal_profit_u_1 |       4 |      4     0     0   100 |           3.1  |          12.38 |           428.18  |           4.13 |
+| signal_profit_u_e_1 |       3 |      3     0     0   100 |           0.48 |           1.44 |            51.218 |           0.48 |
+|     signal_profit_2 |       2 |      2     0     0   100 |           5.24 |          10.47 |           346.288 |           3.49 |
+|     signal_profit_0 |       1 |      1     0     0   100 |           1.16 |           1.16 |            42.62  |           0.39 |
+================== SUMMARY METRICS ==================
+| Metric                      | Value               |
+|-----------------------------+---------------------|
+| Backtesting from            | 2025-02-01 00:00:00 |
+| Backtesting to              | 2025-06-01 14:30:00 |
+| Max open trades             | 3                   |
+|                             |                     |
+| Total/Daily Avg Trades      | 28 / 0.23           |
+| Starting balance            | 10000 USDT          |
+| Final balance               | 11014.115 USDT      |
+| Absolute profit             | 1014.115 USDT       |
+| Total profit %              | 10.14%              |
+| CAGR %                      | 34.15%              |
+| Sortino                     | 3.50                |
+| Sharpe                      | 2.06                |
+| Calmar                      | 71.93               |
+| Profit factor               | 3.02                |
+| Expectancy (Ratio)          | 36.22 (0.36)        |
+| Trades per day              | 0.23                |
+| Avg. daily profit %         | 0.08%               |
+| Avg. stake amount           | 3561.555 USDT       |
+| Total trade volume          | 99723.549 USDT      |
+|                             |                     |
+| Best Pair                   | ADA/USDT 16.38%     |
+| Worst Pair                  | ETH/USDT -7.48%     |
+| Best trade                  | XRP/USDT 5.32%      |
+| Worst trade                 | ETH/USDT -5.09%     |
+| Best day                    | 746.204 USDT        |
+| Worst day                   | -250.87 USDT        |
+| Days win/draw/lose          | 11 / 97 / 3         |
+| Avg. Duration Winners       | 1:02:00             |
+| Avg. Duration Loser         | 14:58:00            |
+| Max Consecutive Wins / Loss | 10 / 3              |
+| Rejected Entry signals      | 12                  |
+| Entry/Exit Timeouts         | 0 / 0               |
+|                             |                     |
+| Min balance                 | 10012.481 USDT      |
+| Max balance                 | 11176.618 USDT      |
+| Max % of account underwater | 2.24%               |
+| Absolute Drawdown (Account) | 2.24%               |
+| Absolute Drawdown           | 250.87 USDT         |
+| Drawdown high               | 1176.618 USDT       |
+| Drawdown low                | 925.748 USDT        |
+| Drawdown Start              | 2025-03-24 01:30:00 |
+| Drawdown End                | 2025-03-28 23:45:00 |
+| Market change               | -25.93%             |
+=====================================================
+
+Backtested 2025-02-01 00:00:00 -> 2025-06-01 14:30:00 | Max open trades : 3
+========================================================================= STRATEGY SUMMARY ========================================================================
+|     Strategy |   Entries |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |           Drawdown |
+|--------------+-----------+----------------+----------------+-------------------+----------------+----------------+-------------------------+--------------------|
+| NFI5MOHO_WIP |        28 |           1.07 |          29.82 |          1014.115 |          10.14 |        3:31:00 |    23     0     5  82.1 | 250.87 USDT  2.24% |
+===================================================================================================================================================================
+
+For more details, please look at the detail tables above
