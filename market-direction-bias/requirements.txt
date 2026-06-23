@@ -1,0 +1,5 @@
+pyindicators>=0.15.0
+pandas>=2.0
+numpy>=1.24
+# optional, only for validate_realdata.py:
+# yfinance>=0.2
