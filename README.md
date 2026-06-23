@@ -15,6 +15,7 @@ A consolidated repository of systematic trading strategy research across gold, f
 | [TimesFM](./TimesFM/) | Experiment wiring Google's TimesFM 2.5 foundation model as an H4 direction filter, with M15 rejected-level entries | Experimental |
 | [gold_quant_lab](./gold_quant_lab/) | Broader research lab testing ICT/CRT concepts, trend-following, and cross-sectional momentum on a 15-instrument basket | Research |
 | [freqtrade-strategies](./freqtrade-strategies/) | Freqtrade crypto strategy collection tested on Bybit USDT pairs — includes NFI, ElliotV5, NASOS, ArcaneLiM2, and a futures leverage sweep | Backtested |
+| [market-direction-bias](./market-direction-bias/) | Deterministic multi-factor bias engine returning −1 / 0 / +1 with per-component breakdown — designed as the auditable direction layer feeding a TradePlan | Active |
 
 ---
 
@@ -55,7 +56,8 @@ Trading-Research/
 ├── fable5-improved-strategy/        v2 engines with cost model + walk-forward
 ├── TimesFM/                         TimesFM 2.5 H4 direction filter experiment
 ├── gold_quant_lab/                  Trend-following + momentum research lab
-└── freqtrade-strategies/            Crypto strategy collection (Bybit / Freqtrade)
+├── freqtrade-strategies/            Crypto strategy collection (Bybit / Freqtrade)
+└── market-direction-bias/           Deterministic -1/0/+1 bias engine (PyIndicators)
 ```
 
 ---
