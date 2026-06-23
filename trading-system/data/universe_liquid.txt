@@ -1,0 +1,67 @@
+# Rotating universe for gapper/catalyst backtest.
+# ~50 liquid names with catalyst potential — high-beta tech, EV, crypto-proxy,
+# fintech, and momentum names commonly seen as "stocks in play."
+# Mega-caps (AAPL, MSFT, AMZN, GOOGL) excluded — efficient markets, no catalyst edge.
+# Expand or trim this list; the scanner filters to in-play names each day.
+
+# crypto-proxy / volatile tech
+MARA
+RIOT
+COIN
+HOOD
+SOFI
+UPST
+AFRM
+OPEN
+
+# EV / auto-disruptive
+TSLA
+RIVN
+LCID
+NIO
+XPEV
+LI
+BLNK
+CHPT
+
+# AI / software momentum
+NVDA
+AMD
+PLTR
+PATH
+AI
+SOUN
+BBAI
+CLOV
+
+# fintech / payments
+PYPL
+SQ
+AFRM
+DAVE
+
+# high-beta growth / consumer tech
+SNAP
+PINS
+ROKU
+RBLX
+DKNG
+PENN
+UBER
+LYFT
+NFLX
+META
+SHOP
+CVNA
+
+# biotech / pharma wildcards (catalyst-driven by nature)
+MRNA
+BNTX
+SGEN
+
+# misc momentum
+GME
+BBBY
+SPCE
+JOBY
+ACHR

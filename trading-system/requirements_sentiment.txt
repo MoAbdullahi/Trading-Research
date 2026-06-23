@@ -1,0 +1,18 @@
+# New dependencies for the X sentiment pipeline
+# Add these to requirements.txt
+
+# X / Twitter scraping (account pooling, rate-limit-aware)
+twscrape>=0.12.0
+
+# Fuzzy deduplication — prevents duplicate wire headlines from double-counting
+rapidfuzz>=3.6.0
+
+# High-performance time-window aggregation (volume spike EWMA)
+polars>=0.20.0
+
+# Prometheus metrics (signals/sec, latency, token cost tracking)
+prometheus_client>=0.20.0
+
+# LangChain Anthropic integration (structured output for sentiment agent)
+langchain-anthropic>=0.1.0
+langchain-core>=0.1.0
