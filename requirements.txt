@@ -1,0 +1,22 @@
+# core
+pydantic>=2.6
+pydantic-settings>=2.2
+pandas>=2.2
+numpy>=1.26
+scipy>=1.12
+
+# agent lane
+langgraph>=0.2
+langgraph-checkpoint-postgres>=2.0
+anthropic>=0.39
+
+# venues (install per phase)
+alpaca-py>=0.30        # phase 1: US equities
+ccxt>=4.3              # phase 4: crypto
+oandapyV20>=0.7        # phase 4: forex + gold
+
+# persistence
+asyncpg>=0.29
+
+# dev
+pytest>=8.0

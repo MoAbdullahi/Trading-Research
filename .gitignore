@@ -1,0 +1,51 @@
+# === SECRETS — never commit ===
+.env
+*.env
+.env.*
+!.env.example
+secrets.json
+credentials.json
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+ENV/
+.venv/
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# === Data / caches ===
+data/bar_cache/
+*.pkl
+*.parquet
+*.csv
+*.sqlite
+*.db
+state_hwm.json
+
+# === IDE / OS ===
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === Test artefacts ===
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# === Jupyter ===
+.ipynb_checkpoints/
