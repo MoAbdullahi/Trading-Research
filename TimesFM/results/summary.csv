@@ -1,0 +1,5 @@
+forecaster,level_mode,period,n,win_rate,gross_r,net_r,pf_net,max_dd_net,avg_cost_r
+baseline,swing,train,28,35.7,8.6,4.13,1.2,6.87,0.16
+baseline,swing,test,4,25.0,0.0,-0.23,0.93,1.06,0.057
+baseline,h4candle,train,9,44.4,7.0,5.26,1.89,2.44,0.194
+baseline,h4candle,test,4,50.0,4.0,3.86,2.87,1.04,0.035

@@ -1,0 +1,22 @@
+# ---------------------------------------------------------------------------
+# Core pipeline (baseline forecaster) — runs on any Python 3.10+
+# ---------------------------------------------------------------------------
+pandas
+numpy
+pyarrow
+
+# ---------------------------------------------------------------------------
+# Real TimesFM 2.5  (optional; only for `--forecaster timesfm`)
+# ---------------------------------------------------------------------------
+# IMPORTANT: TimesFM 2.5 is NOT on PyPI. `pip install timesfm` gives the old
+# 1.x / 2.0 packages only. Install 2.5 FROM SOURCE, and use Python 3.11 or 3.12
+# (torch has no 3.14 wheels; TimesFM targets 3.10-3.12). See INSTALL.md.
+#
+#   pip install torch
+#   pip install "timesfm[torch] @ git+https://github.com/google-research/timesfm.git"
+#
+# (kept here as comments so `pip install -r requirements.txt` doesn't fail on
+#  a too-new Python — install torch + timesfm separately per INSTALL.md.)
+
+# .\.venv-tfm\Scripts\Activate.ps1
+# deactivate

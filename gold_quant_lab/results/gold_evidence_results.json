@@ -1,0 +1,57 @@
+{
+  "Asian->London 2R (opp stop)": {
+    "trades": 946,
+    "win_rate": 0.438,
+    "avg_R": -0.043,
+    "total_R": -40.9,
+    "avg_win_R": 0.89,
+    "avg_loss_R": -0.77,
+    "profit_factor": 0.9,
+    "max_dd_R": -67.9,
+    "verdict": "FAIL"
+  },
+  "Asian->London 1R (opp stop)": {
+    "trades": 946,
+    "win_rate": 0.475,
+    "avg_R": -0.056,
+    "total_R": -52.7,
+    "avg_win_R": 0.737,
+    "avg_loss_R": -0.772,
+    "profit_factor": 0.86,
+    "max_dd_R": -65.7,
+    "verdict": "FAIL"
+  },
+  "Asian->London 1.5R (mid stop)": {
+    "trades": 946,
+    "win_rate": 0.403,
+    "avg_R": -0.099,
+    "total_R": -93.3,
+    "avg_win_R": 1.212,
+    "avg_loss_R": -0.982,
+    "profit_factor": 0.83,
+    "max_dd_R": -118.5,
+    "verdict": "FAIL"
+  },
+  "Donchian-96 trend (3xATR trail)": {
+    "trades": 1311,
+    "win_rate": 0.342,
+    "avg_R": -0.122,
+    "total_R": -159.4,
+    "avg_win_R": 0.896,
+    "avg_loss_R": -0.651,
+    "profit_factor": 0.72,
+    "max_dd_R": -170.1,
+    "verdict": "FAIL"
+  },
+  "Donchian-192 trend (3xATR trail)": {
+    "trades": 921,
+    "win_rate": 0.354,
+    "avg_R": -0.088,
+    "total_R": -81.4,
+    "avg_win_R": 0.923,
+    "avg_loss_R": -0.643,
+    "profit_factor": 0.79,
+    "max_dd_R": -95.7,
+    "verdict": "FAIL"
+  }
+}

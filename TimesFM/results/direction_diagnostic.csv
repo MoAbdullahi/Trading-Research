@@ -1,0 +1,5 @@
+forecaster,symbol,signal,period,n,hit,long_n,long_hit,short_n,short_hit,mean_signed_ret
+baseline,XAUUSD,gated,train,35,22.9,15,13.3,20,30.0,-0.004398
+baseline,XAUUSD,gated,test,23,26.1,23,26.1,0,,-0.007937
+baseline,XAUUSD,raw,train,4119,49.2,2213,51.6,1906,46.3,-0.000131
+baseline,XAUUSD,raw,test,2116,51.3,1476,56.2,640,40.0,0.000363

@@ -1,0 +1,72 @@
+[
+  {
+    "strategy": "H1 Donchian-20 trend",
+    "trades": 709,
+    "win_rate": 0.353,
+    "avg_R": -0.08,
+    "total_R": -56.4,
+    "profit_factor": 0.8,
+    "max_dd_R": -65.3,
+    "buy_hold_%": 156.6
+  },
+  {
+    "strategy": "H1 Donchian-60 trend",
+    "trades": 439,
+    "win_rate": 0.339,
+    "avg_R": -0.063,
+    "total_R": -27.5,
+    "profit_factor": 0.85,
+    "max_dd_R": -50.1,
+    "buy_hold_%": 156.6
+  },
+  {
+    "strategy": "H4 Donchian-20 trend",
+    "trades": 200,
+    "win_rate": 0.4,
+    "avg_R": -0.002,
+    "total_R": -0.4,
+    "profit_factor": 0.99,
+    "max_dd_R": -17.4,
+    "buy_hold_%": 157.1
+  },
+  {
+    "strategy": "H4 Donchian-60 trend",
+    "trades": 138,
+    "win_rate": 0.362,
+    "avg_R": -0.005,
+    "total_R": -0.7,
+    "profit_factor": 0.98,
+    "max_dd_R": -10.2,
+    "buy_hold_%": 157.1
+  },
+  {
+    "strategy": "D1 Donchian-20 trend",
+    "trades": 42,
+    "win_rate": 0.5,
+    "avg_R": 0.316,
+    "total_R": 13.3,
+    "profit_factor": 2.06,
+    "max_dd_R": -2.9,
+    "buy_hold_%": 129.3
+  },
+  {
+    "strategy": "D1 Donchian-55 trend",
+    "trades": 24,
+    "win_rate": 0.625,
+    "avg_R": 0.583,
+    "total_R": 14.0,
+    "profit_factor": 3.71,
+    "max_dd_R": -2.0,
+    "buy_hold_%": 129.3
+  },
+  {
+    "strategy": "D1 EMA 50/200 cross",
+    "trades": 52,
+    "win_rate": 0.442,
+    "avg_R": 0.27,
+    "total_R": 14.1,
+    "profit_factor": 1.78,
+    "max_dd_R": -6.1,
+    "buy_hold_%": 129.3
+  }
+]

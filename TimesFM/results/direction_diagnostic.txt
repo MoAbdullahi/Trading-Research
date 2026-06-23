@@ -1,0 +1,12 @@
+
+baseline  XAUUSD  horizon=6 H4 bars  min_move=0.0005  stride=8
+==========================================================================
+edge = hit clearly > 50%.  ~50% = noise.  <50% = backwards.
+
+GATED signal (what the backtest trades)
+  train: n=   35  hit= 22.9%  long(n=  15,hit= 13.3%)  short(n=  20,hit= 30.0%)  mean_signed_ret=-0.00440
+  test : n=   23  hit= 26.1%  long(n=  23,hit= 26.1%)  short(n=   0,hit=  nan%)  mean_signed_ret=-0.00794
+
+RAW median-forecast direction (no gate) 
+  train: n= 4119  hit= 49.2%  long(n=2213,hit= 51.6%)  short(n=1906,hit= 46.3%)  mean_signed_ret=-0.00013
+  test : n= 2116  hit= 51.3%  long(n=1476,hit= 56.2%)  short(n= 640,hit= 40.0%)  mean_signed_ret=+0.00036
