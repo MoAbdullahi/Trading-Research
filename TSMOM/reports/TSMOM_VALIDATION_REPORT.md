@@ -35,3 +35,49 @@ combined with low-correlation streams rather than standalone.
 2. Combine with passive-long and/or other low-corr signals (0.23 corr => the blend
    Sharpe exceeds either alone).
 3. Port into the gateway and forward-test; this is the horse worth developing.
+
+
+## Win rate & drawdown
+
+Win rate is reported by holding horizon, because a vol-targeted portfolio has no
+single "win %" — it depends on the period measured. The rise with horizon is the
+signature of trend-following (a small per-period edge that compounds).
+
+| Horizon | Win rate |
+|---|---|
+| Daily bars positive | 53.2% |
+| Months positive | 50.4% |
+| Rolling 12-month windows positive | 59.3% |
+| Calendar years positive | 69% (9 / 13 years) |
+
+| Drawdown | Value |
+|---|---|
+| Max drawdown | -12.1% |
+| Time in drawdown | 96% of days |
+
+The daily 53% is the honest hit rate — barely above a coin flip, as expected; the
+edge is in winner-vs-loser size across regimes, not in being right often. The 96%
+time-in-drawdown is benign: returns are small, so the slowly-rising equity curve
+sits just under its prior peak almost always — the drawdowns are shallow
+(max -12%), only persistent.
+
+Per-calendar-year net return (2 bps):
+2014 +5.2% | 2015 +9.3% | 2016 -5.6% | 2017 +1.0% | 2018 -1.7% | 2019 +2.6% |
+2020 +4.0% | 2021 +1.3% | 2022 -0.3% | 2023 -3.8% | 2024 +5.0% | 2025 +6.6% |
+2026 +3.7% (YTD).
+
+## How the strategy works — and where the code lives
+
+Five causal steps: (1) **signal** — long if an instrument's own trailing 252-day
+return is positive, else short; (2) **sizing** — inverse-vol to a 10% target,
+capped 3×; (3) **rebalance** — monthly (every 21 days); (4) **portfolio** —
+equal-risk average across active instruments; (5) **costs** — turnover × spread,
+charged every rebalance (all numbers net). See the README "How it works" section
+for the full description.
+
+| File | Role |
+|---|---|
+| `src/tsmom_basket.py` | the strategy end-to-end (read first) |
+| `src/tsmom_validation.py` | cost sweep, regimes, breadth, beta, variants (this report's numbers) |
+| `src/run_relative_strength.py` | cross-sectional variant (weaker, for contrast) |
+| `scripts/fetch_basket_d1.py` | builds the daily basket parquets |
